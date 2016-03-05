@@ -8,7 +8,8 @@ import (
     "strings"
     "strconv"
 )
-//http GetandSave
+//单协程函数，改函数占用主线程的时间
+//简练的一句话，就可以下载
 func GetandSave(url ,filename string) bool {
 	filename = strings.TrimSpace(filename)
 	resp, err := http.Get(url)
